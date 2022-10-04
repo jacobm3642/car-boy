@@ -18,7 +18,7 @@ class Car {
 
     update(){
         this.#move()
-        this.sensor.update();
+        //this.sensor.update();
     }
 
     #move(){
@@ -72,7 +72,7 @@ class Car {
 
         ctx.restore();
 
-        this.sensor.draw(ctx)
+        //this.sensor.draw(ctx)
     }
 
 }
