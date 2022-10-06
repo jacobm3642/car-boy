@@ -24,7 +24,7 @@ class Car{
         if(this.controls.forward){
             this.speed+=this.acceleration;
         }
-        if(this.controls.reverse){
+        if(this.controls.back){
             this.speed-=this.acceleration;
         }
 
