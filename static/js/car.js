@@ -7,7 +7,7 @@ class Car {
 
         this.speed = 0
         this.accesraton = 0.2;
-        this.maxSpeed = 9;
+        this.maxSpeed = 15;
         this.frick = 0.05;
         this.diret = 0
 
@@ -18,7 +18,7 @@ class Car {
 
     update(){
         this.#move()
-        //this.sensor.update();
+        this.sensor.update();
     }
 
     #move(){
@@ -72,7 +72,7 @@ class Car {
 
         ctx.restore();
 
-        //this.sensor.draw(ctx)
+        this.sensor.draw(ctx)
     }
 
 }

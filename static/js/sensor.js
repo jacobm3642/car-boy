@@ -29,7 +29,7 @@ class Sensor{
     }
 
     draw(ctx){
-        for(let i = 0;i<this.rayCount;i++){
+        for(let i = 0;i<this.rays.length;i++){
             console.log(this.rays)
             ctx.beginPath();
             ctx.lineWidth=2
