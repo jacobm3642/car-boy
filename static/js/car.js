@@ -14,6 +14,9 @@ class Car{
 
         if(controlType!="DUMMY"){
         this.sensor=new Sensor(this);
+        this.brain = new nerulNetwork(
+            [this.sensor.rayCount,6,4]
+        );
     }
         this.controls=new Controls(controlType);
     }
@@ -26,7 +29,12 @@ class Car{
         }
         if(this.sensor){
         this.sensor.update(roadBorders,trafic);
-    }
+        const offsets = this.sensor.readings.map(
+            s=>s==null?0:1-s.offset
+        );
+        const output = nerulNetwork.feedForward(offsets,this.brain);
+        console.log(output);
+        }
     }
 
     #assessdamige(roadBorders,trafic){
